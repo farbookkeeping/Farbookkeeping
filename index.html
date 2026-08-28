@@ -102,16 +102,48 @@
       <a href="mailto:farbookkeeping02@gmail.com">farbookkeeping02@gmail.com</a>
       <span>Richmond, VA • Serving Virginia</span>
     </div>
-  </div>
-  <form action="mailto:farbookkeeping02@gmail.com" method="post" enctype="text/plain">
-    <label>Name<input name="Name" required></label>
-    <label>Email<input type="email" name="Email" required></label>
-    <label>Business name<input name="Business"></label>
-    <label>How can we help?<textarea name="Message" rows="5" required></textarea></label>
-    <button class="btn" type="submit">Request Free Consultation</button>
-  </form>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
+
+<script>
+  (function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); 
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(() => {
+        document.getElementById("form-status").innerText = "Message sent successfully!";
+      }, (error) => {
+        document.getElementById("form-status").innerText = "Failed to send message.";
+      });
+  });
+</script>
+ <form id="contact-form">
+  <label>Name<input name="name" required></label>
+  <label>Email<input type="email" name="email" required></label>
+  <label>Business name<input name="business"></label>
+  <label>How can we help?<textarea name="message" rows="5" required></textarea></label>
+  <button class="btn" type="submit">Request Free Consultation</button>
+</form>
+
+<p id="form-status"></p>
+ </div>
+  
 </section>
 </main>
+<form id="contact-form">
+  <label>Name<input name="name" required></label>
+  <label>Email<input type="email" name="email" required></label>
+  <label>Business name<input name="business"></label>
+  <label>How can we help?<textarea name="message" rows="5" required></textarea></label>
+  <button class="btn" type="submit">Request Free Consultation</button>
+</form>
+
+<p id="form-status"></p>
 
 <footer>
   <img src="logo.png" alt="FAR Bookkeeping">
@@ -122,6 +154,26 @@
 const menu=document.querySelector('.menu'), nav=document.querySelector('nav');
 menu.addEventListener('click',()=>nav.classList.toggle('open'));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script><script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
 </script>
+
+<script>
+  (function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); 
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(() => {
+        document.getElementById("form-status").innerText = "Message sent successfully!";
+      }, (error) => {
+        document.getElementById("form-status").innerText = "Failed to send message.";
+      });
+  });
+</script>
+
 </body>
 </html>
