@@ -108,13 +108,13 @@
 
 <script>
   (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); 
+    emailjs.init("p0ek7KiXt32JIJCsM"); 
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    emailjs.sendForm("service_nnh1mc3", "template_2pfbgvm", this)
       .then(() => {
         document.getElementById("form-status").innerText = "Message sent successfully!";
       }, (error) => {
