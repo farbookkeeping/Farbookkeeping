@@ -2,7 +2,7 @@
 :root{--blush:#eee5e6;--mauve:#9b6872;--mauve2:#7f4f59;--ink:#2f2e32;--muted:#6c6669;--paper:#fbf9f8;--white:#fff;--line:#ddd3d4}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
-.header{height:86px;position:relative;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 6%}
+.header{height:86px;position:relative;top:10px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 6%}
 .brand{width:120px;height:68px;display:flex;align-items:center}.brand img{width:120px;height:auto;display:block}
 nav{display:flex;align-items:center;gap:30px}nav a{font-size:14px;font-weight:700;text-decoration:none;color:var(--ink)}.nav-cta,.btn{background:var(--mauve);color:#fff!important;border-radius:5px;padding:13px 21px;border:0;text-decoration:none;font-weight:700;display:inline-block;cursor:pointer}.btn:hover,.nav-cta:hover{background:var(--mauve2)}
 .menu{display:none;background:none;border:0;font-size:27px}
