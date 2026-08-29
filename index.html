@@ -137,7 +137,7 @@
 </main>
 
 
-<p id="form-status"></p>
+
 
 <footer>
   <img src="logo.png" alt="FAR Bookkeeping">
@@ -148,24 +148,7 @@
 const menu=document.querySelector('.menu'), nav=document.querySelector('nav');
 menu.addEventListener('click',()=>nav.classList.toggle('open'));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-</script><script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
-</script>
 
-<script>
-  (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); 
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-      .then(() => {
-        document.getElementById("form-status").innerText = "Message sent successfully!";
-      }, (error) => {
-        document.getElementById("form-status").innerText = "Failed to send message.";
-      });
   });
 </script>
 
